@@ -14,3 +14,23 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+#container-comandas::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+#container-comandas::-webkit-scrollbar-track {
+  background: #FFFFFF; /* color of the tracking area */
+  border-radius: 0 10px 10px 0;         
+}
+
+#container-comandas::-webkit-scrollbar-thumb { 
+  background-color: #595757;    /* color of the scroll thumb */
+  border-radius: 10px;       /* roundness of the scroll thumb */
+  border: 3px solid #FFFFFF;  /* creates padding around scroll thumb */
+}
+
+#container-comandas {
+  scrollbar-width: thin;
+  scrollbar-color: #595757 white;
+}

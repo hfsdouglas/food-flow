@@ -10,6 +10,8 @@ import {
     faUtensils 
 } from "@fortawesome/free-solid-svg-icons";
 
+import './page.module.css';
+
 export default function IndexComandas() {
     return (
         <>
@@ -49,7 +51,92 @@ export default function IndexComandas() {
             </header>
             <main className="flex flex-1 flex-col m-16">
                 <h1 className="text-4xl flex font-bold gap-2 mb-11 text-rose"><span>Mesas</span><FontAwesomeIcon icon={faUtensils} className="h-9"/></h1>
-                <div className="flex-1 bg-white rounded-xl p-12 shadow-container">Container</div>
+                <div className="flex flex-1 flex-row justify-center flex-wrap gap-6 bg-white rounded-xl p-12 shadow-container overflow-y-auto" id="container-comandas">
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-middle-orange rounded-xl text-white justify-center items-center text-4xl font-bold">100</div>
+                        <p className="text-center font-bold mt-1">Ocupada</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                    <div className="w-36 h-36 mb-6">
+                        <div className="flex flex-nowrap w-full h-full bg-soft-orange rounded-xl text-white justify-center items-center text-4xl font-bold">101</div>
+                        <p className="text-center font-bold mt-1">Disponível</p>    
+                    </div>
+                </div>
             </main>
         </>
     );
