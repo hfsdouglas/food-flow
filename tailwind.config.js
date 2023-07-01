@@ -15,7 +15,10 @@ module.exports = {
       },
       colors: {
         'palid-green': '#72B5A4',
-
+        'rose': '#F15E5E'
+      },
+      boxShadow: {
+        'container': '2px 2px 20px 0px rgba(0, 0, 0, 0.25)',
       }
     },
   },
