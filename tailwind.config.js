@@ -22,6 +22,9 @@ module.exports = {
       },
       boxShadow: {
         'container': '2px 2px 20px 0px rgba(0, 0, 0, 0.25)',
+      },
+      fontSize: {
+        xxs: '12px',
       }
     },
   },
