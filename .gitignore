@@ -1,0 +1,16 @@
+# mobile
+
+/mobile/node_modules/
+/mobile/.expo/
+.env
+
+# web
+
+/web/node_modules/
+/web/.next/
+.env
+
+# server
+
+/server/node_modules/
+.env

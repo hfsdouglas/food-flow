@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: row;
+}
+
+#container-comandas::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */                
+}
+
+#container-comandas::-webkit-scrollbar-track {
+  background: #FFFFFF; /* color of the tracking area */
+  border-radius: 0 20px 20px 0;         
+}
+
+#container-comandas::-webkit-scrollbar-thumb { 
+  background-color: transparent ;    /* color of the scroll thumb */
+  border-radius: 10px;       /* roundness of the scroll thumb */
+  /*border: 3px solid #FFFFFF; */  /* creates padding around scroll thumb */
+}
+
+#container-comandas {
+  scrollbar-width: thin;
+  scrollbar-color: transparent white;
+}
