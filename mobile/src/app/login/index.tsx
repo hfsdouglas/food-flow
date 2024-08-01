@@ -1,19 +1,27 @@
+import { Input } from "@/components/input";
 import { Image, Text, View, StatusBar } from "react-native";
 
 export default function Login() {
     return (
-        <View className="flex-1 items-center justify-center gap-2 p-16 bg-zinc-100">
-            <StatusBar 
-                barStyle="dark-content"
-                backgroundColor="transparent"
-                translucent
-            />
+        <View className="flex-1 items-center justify-center gap-4 p-12">
 
-            <Image source={require('@/assets/logotype.png')} alt="Logotipo" />
-            <Text className="text-center font-bold text-teal-600 text-md">Potencialize seu restaurante com tecnologia sob medida!</Text>
+            {/* <Image source={require('@/assets/logotype.png')} alt="Logotipo" /> */}
+            <Text className="text-center font-bold text-emerald-400 text-xl">Digite seus dados para iniciar:</Text>
 
-            <View>
-                
+            <View className="w-full flex-column gap-2">
+                <Input>
+                    <Input.Field
+                        placeholder="E-mail"
+                        inputMode="email"
+                    />
+                </Input>
+
+                <Input>
+                    <Input.Field
+                        placeholder="Senha"
+                        secureTextEntry={true}
+                    />
+                </Input>
             </View>
         </View>
     )
