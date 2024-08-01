@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode, useContext, createContext } from "react"
 import { Platform, TextInput, TextInputProps, View, ViewProps } from "react-native"
 import clsx from "clsx"
 import { colors } from "@/styles/colors"
@@ -10,29 +10,40 @@ type InputProps = ViewProps & {
     variant?: Variants
 }
 
+const ThemeContext = createContext<{ variant?: Variants }>({})
+
 function Input ({ children, variant = "primary", className, ...rest }: InputProps ) {
     return (
         <View
             className={
                 clsx(
-                    "bg-indigo-950 shadow-lg shadow-emerald-400 h-16 px-4 flex-row rounded-lg border border-emerald-400",
-                    {"shadow-zinc-100 border-zinc-100": variant === "secondary"},
+                    "mb-4 bg-indigo-900 shadow-xl h-16 px-5 rounded-xl",
+                    {"border border-indigo-950 bg-indigo-200": variant === "secondary"},
                     className 
                 )}
             {...rest}
         >
-            { children }
+            <ThemeContext.Provider value={{ variant }}>
+                { children }
+            </ThemeContext.Provider>
         </View>
     )
 }
 
 function Field ({ ...rest }: TextInputProps) {
+    const { variant } = useContext(ThemeContext)
+
     return (
         <TextInput 
-            className="flex-1 text-emerald-400 text-lg font-regular mb-1"
-            placeholderTextColor={colors.emerald['400']}
-            cursorColor={colors.zinc['100']}
-            selectionColor={ Platform.OS === 'ios' ? colors.zinc['100'] : undefined }
+            className={
+                clsx(
+                    "flex-1 text-indigo-200 text-lg font-regular mb-1",
+                    {"text-indigo-950": variant === "secondary"}
+                )
+            }
+            placeholderTextColor={ variant === "primary" ? colors.indigo['400'] : colors.indigo['700']}
+            cursorColor={colors.lime['400']}
+            selectionColor={ Platform.OS === 'ios' ? colors.lime['400'] : undefined }
             {...rest}
         />
     )

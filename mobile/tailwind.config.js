@@ -9,6 +9,11 @@ module.exports = {
         italic: "Roboto_400Regular_Italic",
         bold: "Roboto_700Bold",
       },
+      colors: {
+        lime: {
+          400: "#35BE55",
+        }
+      }
     },
   },
   plugins: [],
