@@ -17,7 +17,7 @@ function Input ({ children, variant = "primary", className, ...rest }: InputProp
         <View
             className={
                 clsx(
-                    "mb-4 bg-indigo-900 shadow-xl h-16 px-5 rounded-xl",
+                    "mb-4 bg-indigo-900 shadow h-16 px-5 rounded-xl",
                     {"border border-indigo-950 bg-indigo-200": variant === "secondary"},
                     className 
                 )}
@@ -37,7 +37,7 @@ function Field ({ ...rest }: TextInputProps) {
         <TextInput 
             className={
                 clsx(
-                    "flex-1 text-indigo-200 text-lg font-regular mb-1",
+                    "flex-1 text-indigo-200 text-lg font-regular",
                     {"text-indigo-950": variant === "secondary"}
                 )
             }

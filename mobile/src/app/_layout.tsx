@@ -5,20 +5,20 @@ import { Slot } from "expo-router"
 
 import { 
   useFonts,
-  Roboto_300Light,
-  Roboto_400Regular,
-  Roboto_700Bold,
-  Roboto_400Regular_Italic, 
-} from "@expo-google-fonts/roboto"
+  Poppins_100Thin,
+  Poppins_400Regular,
+  Poppins_700Bold,
+  Poppins_400Regular_Italic,
+} from "@expo-google-fonts/poppins"
 
 import { Loading } from "@/components/loading";
 
 export default function layout() {
   const [fontsLoaded] = useFonts({
-    Roboto_300Light,
-    Roboto_400Regular,
-    Roboto_400Regular_Italic,
-    Roboto_700Bold,
+    Poppins_100Thin,
+    Poppins_400Regular,
+    Poppins_700Bold,
+    Poppins_400Regular_Italic,
   });
 
   if (!fontsLoaded) {
@@ -26,7 +26,7 @@ export default function layout() {
   }
 
   return (
-    <View className="flex-1 bg-indigo-950">
+    <View className="flex-1 font-regular bg-indigo-950">
       <StatusBar 
         barStyle="light-content"
         backgroundColor="transparent"

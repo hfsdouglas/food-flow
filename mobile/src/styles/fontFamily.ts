@@ -1,6 +1,6 @@
 export const fontFamily = {
-    light: "Roboto_300Light",
-    regular: "Roboto_400Regular",
-    italic: "Roboto_400Regular_Italic",
-    bold: "Roboto_700Bold",
+    thin: "Poppins_100Thin",
+    regular: "Poppins_400Regular",
+    italic: "Poppins_400Regular_Italic",
+    bold: "Poppins_700Bold",
 }

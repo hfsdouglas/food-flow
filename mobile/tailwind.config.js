@@ -1,19 +1,14 @@
+import { fontFamily } from './src/styles/fontFamily'
+import { colors } from './src/styles/fontFamily'
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
   theme: {
     extend: {
-      fontFamily: {
-        light: "Roboto_300Light",
-        regular: "Roboto_400Regular",
-        italic: "Roboto_400Regular_Italic",
-        bold: "Roboto_700Bold",
-      },
-      colors: {
-        lime: {
-          400: "#35BE55",
-        }
-      }
+      fontFamily,
+      colors,
     },
   },
   plugins: [],
