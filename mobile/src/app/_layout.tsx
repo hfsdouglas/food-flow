@@ -26,7 +26,7 @@ export default function layout() {
   }
 
   return (
-    <View className="flex-1 font-regular bg-indigo-950">
+    <View className="flex-1 font-regular bg-slate-950">
       <StatusBar 
         barStyle="light-content"
         backgroundColor="transparent"

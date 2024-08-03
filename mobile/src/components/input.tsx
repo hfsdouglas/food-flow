@@ -17,13 +17,14 @@ function Input ({ children, variant = "primary", className, ...rest }: InputProp
         <View
             className={
                 clsx(
-                    "mb-4 bg-indigo-900 shadow h-16 px-5 rounded-xl",
-                    {"border border-indigo-950 bg-indigo-200": variant === "secondary"},
+                    "mb-4 relative -z-10 h-16",
+                    {"border border-slate-950 bg-slate-400": variant === "secondary"},
                     className 
                 )}
             {...rest}
         >
             <ThemeContext.Provider value={{ variant }}>
+                
                 { children }
             </ThemeContext.Provider>
         </View>
@@ -34,18 +35,21 @@ function Field ({ ...rest }: TextInputProps) {
     const { variant } = useContext(ThemeContext)
 
     return (
-        <TextInput 
-            className={
-                clsx(
-                    "flex-1 text-indigo-200 text-lg font-regular",
-                    {"text-indigo-950": variant === "secondary"}
-                )
-            }
-            placeholderTextColor={ variant === "primary" ? colors.indigo['400'] : colors.indigo['700']}
-            cursorColor={colors.lime['400']}
-            selectionColor={ Platform.OS === 'ios' ? colors.lime['400'] : undefined }
-            {...rest}
-        />
+        <>
+            <View className="absolute w-full z-10 h-16 rounded-xl bg-slate-500 shadow shadow-slate-500/10 opacity-15" />
+            <TextInput 
+                className={
+                    clsx(
+                        "flex-1 z-20 px-5 text-slate-300 text-lg font-regular",
+                        {"text-indigo-950": variant === "secondary"}
+                    )
+                }
+                placeholderTextColor={ variant === "primary" ? colors.slate['500'] : colors.slate['950']}
+                cursorColor={colors.slate['400']}
+                selectionColor={ Platform.OS === 'ios' ? colors.slate['500'] : undefined }
+                {...rest}
+            />
+        </>
     )
 }
 

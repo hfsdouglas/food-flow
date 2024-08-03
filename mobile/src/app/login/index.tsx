@@ -4,6 +4,10 @@ import { Image, KeyboardAvoidingView, Platform, Text, View } from "react-native"
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";
 
+/**
+ * Images
+ */
+
 export default function Login() {
     return (
         <KeyboardAvoidingView 
@@ -12,8 +16,8 @@ export default function Login() {
             enabled
         >
             <View className="flex-column gap-6">
-                <Image source={require('@/assets/logotype.png')} alt="Logotipo" />
-                <Text className="text-center font-bold text-indigo-200 text-xl mb-2">Digite seus dados {"\n"}para iniciar</Text>
+                <Image source={require('@/assets/images/logotype.png')} alt="Logotipo" />
+                <Text className="text-center font-bold text-slate-400 text-xl mb-2">Digite seus dados {"\n"}para iniciar</Text>
 
                 <View className="w-full">
                     <Input>
@@ -31,7 +35,7 @@ export default function Login() {
                     </Input>
 
                     <Link href={"/"} className="ml-2 mb-4">
-                        <Text className="text-indigo-200 font-regular underline text-md">Esqueci minha senha</Text>
+                        <Text className="text-slate-400 font-regular underline text-md">Esqueci minha senha</Text>
                     </Link>
                     
                     <Button>
@@ -39,7 +43,7 @@ export default function Login() {
                     </Button>
                     
                     <Link href={"/"} className="text-center">
-                        <Text className=" text-indigo-200 font-regular underline text-md">Criar minha conta</Text>
+                        <Text className=" text-slate-400 font-regular underline text-md">Criar minha conta</Text>
                     </Link>
                 </View>
             </View>

@@ -13,12 +13,13 @@ type ButtonProps = TouchableOpacityProps & {
 
 const ThemeContext = createContext<{ variant?: Variants }>({})
 
-function Button ({children, variant, isLoading, ...rest}: ButtonProps) {
+function Button ({children, variant, className, isLoading, ...rest}: ButtonProps) {
     return (
         <TouchableOpacity
             className={
                 clsx(
-                    "h-16 flex-row items-center px-5 bg-lime-400 rounded-xl shadow mb-4"
+                    "h-16 flex-row items-center px-5 bg-slate-400 rounded-xl shadow mb-4",
+                    className
                 )
             }
             activeOpacity={0.8}
@@ -31,13 +32,14 @@ function Button ({children, variant, isLoading, ...rest}: ButtonProps) {
     )
 }
 
-function Title ({ children }: TextProps) {
+function Title ({ children, className }: TextProps) {
     const { variant } = useContext(ThemeContext)
 
     return (
         <Text className={
                 clsx(
-                    "flex-1 text-indigo-950 font-bold text-lg"
+                    "flex-1 text-slate-950 font-bold text-lg",
+                    className
                 )
             }
         >
