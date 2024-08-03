@@ -3,12 +3,13 @@ import { Text, TextProps, TouchableOpacity, TouchableOpacityProps } from "react-
 import clsx from "clsx";
 
 import { Loading } from "./loading";
+import { colors } from "@/styles/colors";
 
 type Variants = "primary" | "secondary"
 
 type ButtonProps = TouchableOpacityProps & {
     variant?: Variants,
-    isLoading?: boolean
+    isLoading?: boolean,
 }
 
 const ThemeContext = createContext<{ variant?: Variants }>({})
@@ -18,7 +19,8 @@ function Button ({children, variant, className, isLoading, ...rest}: ButtonProps
         <TouchableOpacity
             className={
                 clsx(
-                    "h-16 flex-row items-center px-5 bg-slate-400 rounded-xl shadow mb-4",
+                    "h-16 px-5 bg-slate-400 rounded-xl shadow mb-4 justify-center",
+                    {"border border-slate-400 bg-transparent": variant === "secondary"},
                     className
                 )
             }
@@ -38,10 +40,12 @@ function Title ({ children, className }: TextProps) {
     return (
         <Text className={
                 clsx(
-                    "flex-1 text-slate-950 font-bold text-lg",
+                    "text-slate-950 font-bold text-lg",
+                    {"text-slate-400": variant === "secondary"},
                     className
                 )
             }
+            style={{ color: variant === "secondary" ? colors.slate['400'] : colors.slate['950'] }}
         >
             { children }
         </Text>
