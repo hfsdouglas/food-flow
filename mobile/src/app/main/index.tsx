@@ -50,6 +50,22 @@ export default function Main() {
                     }/>
                 </View>
             </View>
+
+            <View className="p-5">
+                <View>
+                    <Text className="font-bold text-slate-400">BROWNIE</Text>
+                    
+                    <View className="h-36 mt-5 p-3 flex-row bg-slate-500/15 rounded-xl">
+                        <View className="w-[88px]"></View>
+
+                        <View className="flex-1">
+                            <Text className="font-bold text-slate-400">BROWNIE</Text>
+                            <Text className="font-bold text-slate-400">BROWNIE</Text>
+                            <Text className="font-bold text-slate-400">BROWNIE</Text>
+                        </View>
+                    </View>
+                </View>
+            </View>
             
             <View className="absolute bottom-0 w-full h-auto bg-slate-500/15 flex-row justify-around p-4">
                 <TabLoja />
