@@ -1,6 +1,6 @@
 import "@/styles/global.css"
 
-import { StatusBar, View } from "react-native"
+import { SafeAreaView, StatusBar, View } from "react-native"
 import { Slot } from "expo-router"
 
 import { 
@@ -32,7 +32,9 @@ export default function layout() {
         backgroundColor="transparent"
         translucent
       />
-      <Slot />
+      <SafeAreaView className="flex-1">
+        <Slot />
+      </SafeAreaView>
     </View>
   )
 }
