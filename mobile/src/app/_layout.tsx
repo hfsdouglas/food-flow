@@ -1,15 +1,15 @@
-import "@/styles/global.css"
+import "@/styles/global.css";
 
-import { SafeAreaView, StatusBar, View } from "react-native"
-import { Slot } from "expo-router"
+import { StatusBar, View } from "react-native";
+import { Slot } from "expo-router";
 
-import { 
+import {
   useFonts,
   Poppins_100Thin,
   Poppins_400Regular,
   Poppins_700Bold,
   Poppins_400Regular_Italic,
-} from "@expo-google-fonts/poppins"
+} from "@expo-google-fonts/poppins";
 
 import { Loading } from "@/components/loading";
 
@@ -32,9 +32,7 @@ export default function layout() {
         backgroundColor="transparent"
         translucent
       />
-      <SafeAreaView className="flex-1">
-        <Slot />
-      </SafeAreaView>
+      <Slot />
     </View>
   )
 }
