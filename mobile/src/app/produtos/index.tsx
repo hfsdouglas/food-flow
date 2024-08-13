@@ -3,6 +3,7 @@ import { Text, TouchableOpacity, View, Platform, Pressable, TextInput, FlatList 
 import { Search, X } from "lucide-react-native";
 
 import { colors } from "@/styles/colors";
+import { height } from "@/styles/sizes";
 
 import { Button } from "@/components/button";
 
@@ -14,8 +15,6 @@ const data = [
     { title: "DONUTS" },
     { title: "DOCES" },
 ]
-
-const height = Platform.OS === 'ios' ? 'h-32' : 'h-24'
 
 export enum SearchBarHeader {
     "OPENED" = 1,
