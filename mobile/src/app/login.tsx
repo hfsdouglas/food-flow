@@ -4,10 +4,6 @@ import { Image, KeyboardAvoidingView, Platform, Text, View } from "react-native"
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";
 
-/**
- * Images
- */
-
 export default function Login() {
     return (
         <KeyboardAvoidingView 

@@ -32,6 +32,7 @@ export default function layout() {
         backgroundColor="transparent"
         translucent
       />
+
       <Slot />
     </View>
   )

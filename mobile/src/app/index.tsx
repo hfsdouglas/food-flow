@@ -1,9 +1,9 @@
 import Login from "./login";
-import Main from "./main";
+import Produtos from "./produtos";
 
 export default function index() {
     return (
         // <Login />
-        <Main />
+        <Produtos />
     )
 }

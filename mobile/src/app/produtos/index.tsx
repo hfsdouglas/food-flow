@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Text, TouchableOpacity, View, Platform, Pressable, TextInput, FlatList } from "react-native";
+import { Text, View, Platform, Pressable, TextInput, FlatList } from "react-native";
+import { Link } from "expo-router";
 import { Search, X } from "lucide-react-native";
 
 import { colors } from "@/styles/colors";
 import { height } from "@/styles/sizes";
 
 import { Button } from "@/components/button";
+import ProductCard from "@/components/product-card";
 
 const data = [
     { title: "BROWNIE" },
@@ -94,20 +96,11 @@ export default function Produtos() {
             <View className="p-5">
                 <View>
                     <Text className="font-bold text-slate-400">BROWNIE</Text>
-                    
-                    <TouchableOpacity 
-                        className="h-36 mt-5 p-3 flex-row gap-3 bg-slate-500/15 rounded-xl"
-                        activeOpacity={0.9}
-                    >
-                        <View className="w-[102px] bg-red-500 border rounded-lg"></View>
-
-                        <View className="flex-1 justify-between">
-                            <Text className="font-bold text-slate-400 text-md">Brownie PERFEITO - recheado com doce de leite vegano</Text>
-                            <Text className="font-regular text-slate-400/80 text-xs">Chocolate 70% cacau adoçado com açúcar de coco (massa de cacau...</Text>
-                            <Text className="font-bold uppercase text-lime-400">R$ 52,00</Text>
-                        </View>
-                    </TouchableOpacity>
                 </View>
+                
+                <Link push href={{ pathname: '/produtos/detalhes/[id]', params: { id: '1' } }} asChild>
+                    <ProductCard /> 
+                </Link>
             </View>
         </>
     )
