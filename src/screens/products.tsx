@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { SectionList, Text, View } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 type RootStackParamList = {
@@ -10,22 +10,29 @@ type ProductsProps = {
 }
 
 import { ProductsHeader } from '@/components/products-header';
-import ProductCard from '@/components/product-card';
+import { ProductCard } from '@/components/product-card';
+
+import { MENU } from '@/utils/products';
 
 export default function Products({ navigation }: ProductsProps) {
   return (
     <View className="flex-1">
       <ProductsHeader />
       
-      <View className="p-5">
-        <View>
-          <Text className="font-bold text-slate-400">BROWNIE</Text>
-        </View>
-        
-        <ProductCard onPress={() => navigation.navigate('Detalhes')}/> 
-      </View>
+      <SectionList 
+        sections={MENU} 
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <ProductCard onPress={() => navigation.navigate('Detalhes')} product={item}/> 
+        )}
+        renderSectionHeader={({ section: { title } }) => (
+          <Text className="text-xl text-slate-400 font-bold mt-5">{title}</Text>
+        )}
+        className="flex-1 p-5"
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 100 }}
+        stickySectionHeadersEnabled={false}
+      />
     </View>
   );
 }
-
-{/* <Button title="Produto - Detalhes" onPress={ }/> */}
