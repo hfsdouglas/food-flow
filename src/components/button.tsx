@@ -10,11 +10,16 @@ type Variants = "primary" | "secondary"
 type ButtonProps = TouchableOpacityProps & {
     variant?: Variants,
     isLoading?: boolean,
+    isSelected: boolean
 }
 
 const ThemeContext = createContext<{ variant?: Variants }>({})
 
-function Button ({children, variant, className, isLoading, ...rest}: ButtonProps) {
+function Button ({children, variant, className, isLoading, isSelected, ...rest}: ButtonProps) {
+    if (isSelected) {
+        variant = 'primary'
+    }
+
     return (
         <TouchableOpacity
             className={
