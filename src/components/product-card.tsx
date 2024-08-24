@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity, TouchableOpacityProps, View } from "react-native";
 
-interface Product {
+export type Product = {
     id: string,
     name: string, 
     description: string, 
