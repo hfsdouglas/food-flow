@@ -24,7 +24,7 @@ function Button ({children, variant, className, isLoading, isSelected, ...rest}:
         <TouchableOpacity
             className={
                 clsx(
-                    "h-16 px-5 bg-slate-400 rounded-xl shadow mb-4 justify-center",
+                    "h-16 px-5 bg-slate-400 rounded-xl shadow justify-center",
                     {"border border-slate-400 bg-transparent": variant === "secondary"},
                     className
                 )
