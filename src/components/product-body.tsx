@@ -57,13 +57,13 @@ export function ProductBody({ navigation }: ProductsProps) {
                         </View>
         
                         <View className="flex-row gap-3 items-end pb-3">
-                            <Pressable>
+                            <TouchableOpacity className='h-8 w-8'>
                                 <Search color={colors.slate['400']} size={26} />
-                            </Pressable>
+                            </TouchableOpacity>
                             
-                            <Pressable onPress={toggleSearchButtonPress}>
+                            <TouchableOpacity className='h-8 w-8' onPress={toggleSearchButtonPress}>
                                 <X color={colors.slate['400']} size={26} />
-                            </Pressable>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>
@@ -83,23 +83,23 @@ export function ProductBody({ navigation }: ProductsProps) {
                         </View>
                     </View>
 
-                    <View className="flex-1 flex-row gap-4 items-center">
-                    <TouchableOpacity className='h-7 w-7' onPress={toggleSearchButtonPress}>
-                        <Search color={colors.slate['400']} size={26} />
-                    </TouchableOpacity>
+                    <View className="flex-1 flex-row gap-3 items-center">
+                        <TouchableOpacity className='h-8 w-8' onPress={toggleSearchButtonPress}>
+                            <Search color={colors.slate['400']} size={26} />
+                        </TouchableOpacity>
 
-                    <Text className='text-slate-400 text-4xl'>|</Text>
+                        <Text className='text-slate-400 text-4xl leading-none'>|</Text>
 
-                    <FlatList 
-                        data={CATEGORIES} 
-                        horizontal
-                        showsHorizontalScrollIndicator={false} 
-                        renderItem={({ item }) => (
-                            <Button className="h-[28px] mx-1" variant="secondary" isSelected={category === item.title} onPress={() => handleCategorySelect(item.title)}>
-                                <Button.Title className="text-sm">{item.title}</Button.Title>
-                            </Button>
-                        )}
-                    />
+                        <FlatList 
+                            data={CATEGORIES} 
+                            horizontal
+                            showsHorizontalScrollIndicator={false} 
+                            renderItem={({ item }) => (
+                                <Button className="h-[28px] mx-1" variant="secondary" isSelected={category === item.title} onPress={() => handleCategorySelect(item.title)}>
+                                    <Button.Title className="text-sm">{item.title}</Button.Title>
+                                </Button>
+                            )}
+                        />
                     </View>
                 </View>
             )}
