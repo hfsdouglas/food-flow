@@ -1,4 +1,5 @@
 import { Button } from '@/components/button';
+import { Card } from '@/components/card';
 import { colors } from '@/styles/colors';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Minus, Plus } from 'lucide-react-native';
@@ -15,7 +16,7 @@ type ProductDetailsProps = {
 export default function ProductDetails({ navigation }: ProductDetailsProps) {
     return (
       <ScrollView className='p-5'>
-        <View className='bg-slate-900 p-6 mb-5 rounded-lg'>
+        <Card>
           <View className='items-center gap-5'>
             <View className='w-[102px] h-[102px] bg-red-400 rounded-md'></View>
             <Text className='text-xl font-bold text-center text-slate-400'>Brownie PERFEITO - recheado com doce de leite vegano</Text>
@@ -123,7 +124,7 @@ export default function ProductDetails({ navigation }: ProductDetailsProps) {
               </View>
             </View>
           </View>
-        </View>
+        </Card>
 
         <Button className='mb-10' onPress={() => navigation.navigate('StackBagRoutes') }>
           <Button.Title>Adicionar</Button.Title>
