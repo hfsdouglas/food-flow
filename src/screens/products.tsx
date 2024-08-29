@@ -10,7 +10,7 @@ export type ProductsProps = {
 
 import { ProductBody } from '@/components/product-body';
 
-import { SearchModeProvider } from '@/hooks/useSeachMode';
+import { SearchModeProvider } from '@/hooks/use-seach-mode';
 
 export default function Products({ navigation }: ProductsProps) { 
   return (

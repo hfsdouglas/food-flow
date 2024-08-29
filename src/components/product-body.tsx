@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { FlatList, Platform, Pressable, TextInput, TouchableOpacity, View, SectionList, Text } from "react-native"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
-import { SEARCH_MODE, useSearchMode } from "@/hooks/useSeachMode"
+import { SEARCH_MODE, useSearchMode } from "@/hooks/use-seach-mode"
 
 import { ProductsProps } from "@/screens/products"
 
