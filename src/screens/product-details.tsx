@@ -1,9 +1,11 @@
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Minus, Plus } from 'lucide-react-native';
+
 import { Button } from '@/components/button';
 import { Card } from '@/components/card';
 import { colors } from '@/styles/colors';
+
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Minus, Plus } from 'lucide-react-native';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 type RootStackParamList = {
   StackBagRoutes: undefined;
